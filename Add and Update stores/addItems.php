@@ -20,6 +20,7 @@
         $priceOfProduct = $_REQUEST['priceOfProduct'];
         $countOfProduct = $_REQUEST['CountOfProduct'];
         $brandOfProduct = $_REQUEST['brandOfProduct'];
+        $category = $_REQUEST['category'];
         $id = substr($nameOfSport, 0, 3).substr($nameOfItem,0,3).substr($brandOfProduct,0,3).substr($sizeOfProduct,0,3);
 
        
@@ -31,7 +32,7 @@
 
 
         //Update the database                                                                                                                                        
-        $InsertNewProductDetails = "INSERT INTO items (id,sportName,productType ,brand,size,prize,countOfItems,imagePath) VALUES ('".$id."','".$nameOfSport."','".$nameOfItem."','".$brandOfProduct."','".$sizeOfProduct."',$priceOfProduct,$countOfProduct,'".$file_location."')";
+        $InsertNewProductDetails = "INSERT INTO items (id,sportName,productType ,brand,size,prize,category,countOfItems,imagePath) VALUES ('".$id."','".$nameOfSport."','".$nameOfItem."','".$brandOfProduct."','".$sizeOfProduct."',$priceOfProduct,'".$category."',$countOfProduct,'".$file_location."')";
         if($con->query($InsertNewProductDetails) === TRUE){
 
             //Move image to correct file path
@@ -83,7 +84,7 @@
                   <label for="nameOfSport" class="form-label">Name of Sport</label>
                   
                   <select id="nameOfSport"  name="nameOfSport">  
-                         <option value="" ><p id="choose"></option>
+                         <option value="" ></option>
                          <option value="Cricket">Cricket</option>
                          <option value="Vball">Vball</option>
                          <option value="Basket Ball">Basket Ball</option>
@@ -102,7 +103,7 @@
            <div class="dropdown">
                   <label for="nameOfItem" class="form-label">Product Type</label>
                   <select id="nameOfItem"  name="nameOfItem">  
-                         <option value="" ><p id="choose"></option>
+                         <option value="" ></option>
                          <option value="Ball">Ball</option>
                          <option value="Bat">Bat</option>
                          <option value="Shoes">Shoes</option>
@@ -117,10 +118,20 @@
 
 
   <!-- Brand of product  -->
-  <div>  
-          <label for="brandOfProduct" class="form-label">Brand Of Product</label>
-          <input type="text" name="brandOfProduct" value="" id = "brandOfProduct"   />
-          
+  <div class="mb-3">
+           
+           <div class="dropdown">
+                  <label for="brandOfProduct" class="form-label">Brand of Product</label>
+                  <select id="brandOfProduct"  name="brandOfProduct">  
+                         <option value="" ></option>
+                         <option value="nike">nike</option>
+                         <option value="Mikasa">Mikasa</option>
+                         <option value="Puma">Puma</option>
+                         <option value="adidas">adidas</option> 
+                         <option value="Other">Other</option>     
+                 </select>
+
+          </div>
   </div>
 
 
@@ -158,12 +169,34 @@
 
 
 
+
   <!--Count of items -->
   <div>  
           <label for="CountOfProduct" class="form-label">Count of product items</label>
           <input type="number" name="CountOfProduct" id="CountOfProduct" value=""  />
           
   </div>
+
+
+
+
+  <!--Category  -->
+  <div class="mb-3">
+           
+           <div class="dropdown">
+                  <label for="category" class="form-label">Category of Product</label>
+                  <select id="category"  name="category">  
+                         <option value="" ></option>
+                         <option value="Team Sports">Team Sports</option>
+                         <option value="Running and Fitness">Running and Fitness</option>
+                         <option value="Home Play">Home Play</option>
+                         <option value="Other">Other</option>     
+                 </select>
+
+          </div>
+  </div>
+
+
 
 
 
