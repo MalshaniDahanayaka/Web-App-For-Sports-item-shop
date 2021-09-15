@@ -9,7 +9,7 @@
         if($_REQUEST['sizeOfProduct']){
             $sizeOfProduct = $_REQUEST['sizeOfProduct'];
         }else{
-            $sizeOfProduct = 1;
+            $sizeOfProduct = "0";
         }
       
         
@@ -20,7 +20,7 @@
         $priceOfProduct = $_REQUEST['priceOfProduct'];
         $countOfProduct = $_REQUEST['CountOfProduct'];
         $brandOfProduct = $_REQUEST['brandOfProduct'];
-        $id = substr($nameOfSport, 0, 3).substr($nameOfItem,0,3).substr($brandOfProduct,0,3).substr((string)$sizeOfProduct,0,);
+        $id = substr($nameOfSport, 0, 3).substr($nameOfItem,0,3).substr($brandOfProduct,0,3).substr($sizeOfProduct,0,3);
 
        
 
@@ -31,7 +31,7 @@
 
 
         //Update the database                                                                                                                                        
-        $InsertNewProductDetails = "INSERT INTO items (id,sportName,productType ,brand,size,prize,countOfItems,imagePath) VALUES ('".$id."','".$nameOfSport."','".$nameOfItem."','".$brandOfProduct."',$sizeOfProduct,$priceOfProduct,$countOfProduct,'".$file_location."')";
+        $InsertNewProductDetails = "INSERT INTO items (id,sportName,productType ,brand,size,prize,countOfItems,imagePath) VALUES ('".$id."','".$nameOfSport."','".$nameOfItem."','".$brandOfProduct."','".$sizeOfProduct."',$priceOfProduct,$countOfProduct,'".$file_location."')";
         if($con->query($InsertNewProductDetails) === TRUE){
 
             //Move image to correct file path
@@ -129,9 +129,21 @@
 
 
   <!--Size of product  -->
-  <div>  
-          <label for="sizeOfProduct" class="form-label">Size Of Product</label>
-          <input type="number" name="sizeOfProduct" value="" id = "sizeOfProduct"   />
+  <div class="mb-3">
+         
+          <div class="dropdown">
+                  <label for="sizeOfProduct" class="form-label">Size Of Item</label>
+                  
+                  <select id="sizeOfProduct"  name="sizeOfProduct">  
+                         <option value="" ></option>
+                         <option value="small">small</option>
+                         <option value="medium">medium</option>
+                         <option value="large">large</option>
+                         <option value="extra large">extra large</option>     
+                 </select>
+
+            
+          </div>
           
   </div>
 
