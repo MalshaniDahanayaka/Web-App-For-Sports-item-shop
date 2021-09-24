@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 22, 2021 at 03:09 AM
+-- Generation Time: Sep 24, 2021 at 06:42 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -24,6 +24,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `discounteditems`
+--
+
+DROP TABLE IF EXISTS `discounteditems`;
+CREATE TABLE IF NOT EXISTS `discounteditems` (
+  `id` varchar(60) NOT NULL,
+  `discount` float NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `discounteditems`
+--
+
+INSERT INTO `discounteditems` (`id`, `discount`) VALUES
+('CriBatnik4', 0.05),
+('VbaBalnik3', 0.05),
+('BasBalMik1', 0.1),
+('BatBatnik4', 0.1),
+('BatBatnikmed', 0.05),
+('VbaShoadiext', 0.25);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `items`
 --
 
@@ -34,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `items` (
   `productType` varchar(40) NOT NULL,
   `brand` varchar(20) NOT NULL,
   `size` varchar(12) NOT NULL,
-  `prize` int(40) NOT NULL,
+  `prize` float NOT NULL,
   `countOfItems` int(20) NOT NULL,
   `category` varchar(20) NOT NULL,
   `imagePath` varchar(150) NOT NULL,
@@ -47,15 +72,15 @@ CREATE TABLE IF NOT EXISTS `items` (
 --
 
 INSERT INTO `items` (`id`, `sportName`, `productType`, `brand`, `size`, `prize`, `countOfItems`, `category`, `imagePath`, `solds`) VALUES
-('CriBatnik4', 'Cricket', 'Bat', 'nike', 'large', 34523, 6, 'Team Sports', 'img/9.jpg', 2),
-('VbaBalnik3', 'Vball', 'Ball', 'nike', 'small', 456666, 5, 'Team Sports', 'img/8.jpg', 1),
-('BasBalMik1', 'Basket Ball', 'Ball', 'Mikasa', 'small', 3456, 8, 'Running and Fitness', 'img/3.jpg', 4),
-('BatBatnik4', 'Batminton', 'Bat', 'nike', 'small', 443353, 5, 'Home Play', 'img/1.jpg', 4),
-('BatBatnikmed', 'Batminton', 'Bat', 'nike', 'medium', 56777, 5, 'Home Play', 'img/6.jpg', 2),
-('CriBatadimed', 'Cricket', 'Bat', 'adidas', 'medium', 564644, 7, 'Team Sports', 'img/9.jpg', 4),
+('CriBatnik4', 'Cricket', 'Bat', 'nike', 'large', 25000, 6, 'Team Sports', 'img/9.jpg', 2),
+('VbaBalnik3', 'Vball', 'Ball', 'nike', 'small', 45600, 5, 'Team Sports', 'img/8.jpg', 1),
+('BasBalMik1', 'Basket Ball', 'Ball', 'Mikasa', 'small', 3400, 8, 'Running and Fitness', 'img/3.jpg', 4),
+('BatBatnik4', 'Batminton', 'Bat', 'nike', 'small', 44300, 5, 'Home Play', 'img/1.jpg', 4),
+('BatBatnikmed', 'Batminton', 'Bat', 'nike', 'medium', 56500, 5, 'Home Play', 'img/6.jpg', 2),
+('CriBatadimed', 'Cricket', 'Bat', 'adidas', 'medium', 35200, 7, 'Team Sports', 'img/9.jpg', 4),
 ('VbaBatMikmed', 'Vball', 'Bat', 'Mikasa', 'medium', 3535, 8, 'Team Sports', 'img/2.jpg', 2),
-('VbaShoadiext', 'Vball', 'Shoes', 'adidas', 'extra large', 34343, 5, 'Team Sports', 'img/11.jpg', 1),
-('BasShoPumlar', 'Basket Ball', 'Shoes', 'Puma', 'large', 43434343, 56645, 'Running and Fitness', 'img/7.jpg', 3),
+('VbaShoadiext', 'Vball', 'Shoes', 'adidas', 'extra large', 34750, 5, 'Team Sports', 'img/11.jpg', 1),
+('BasShoPumlar', 'Basket Ball', 'Shoes', 'Puma', 'large', 43434300, 56645, 'Running and Fitness', 'img/7.jpg', 3),
 ('VbaShoMikext', 'Vball', 'Shoes', 'Mikasa', 'extra large', 534523, 105252, 'Team Sports', 'img/4.jpg', 5);
 
 -- --------------------------------------------------------
