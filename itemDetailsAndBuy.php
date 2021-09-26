@@ -157,9 +157,9 @@ function magnify(imgID, zoom) {
                                        </li>
                                   </ul>
                                   <div class="tab-content" id="myTabContent">
-                                          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">this is about this ball its is fucking orgasm and it contains many big bolls to fuck finally i want say  if you like to fuck balls bring this and make a hall and fuck this ball</div>
-                                          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">this is aobut this ball profile fucking orgasm guys iwant to say it is not to fucking orgasm bal because it some times takes big ball and lit of timess.</div>
-                                          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">this row actually i does'nt have to say anything because it is not complete ting and i finally tried to fuck this all situatins and i am fucker of the <world></world></div>
+                                          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"></div>
+                                          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
+                                          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><world></world></div>
                                   </div>
 
                            </div>
