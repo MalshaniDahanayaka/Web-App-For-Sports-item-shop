@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    height: 10vh;
+    
+}
+
+.navbar-style{
+    box-shadow: 0 5px 10px #efefef;
+    background-color: rgb(61, 168, 40);
+    text-decoration-color: white;
+}
+.navbar-right img{
+    height: 50px;
+    width: 50px;
+
+}
+.navbar-default{
+    text-transform: uppercase;
+
+}

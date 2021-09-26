@@ -1,23 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>header</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="include/header.css">
+ <style>
+        .navbar-nav.navbar-center {
+            position: absolute;
+            left: 50%;
+            
+            transform: translatex(-50%);
+        }
+    </style>
 
-</head>
-<body>
-    
-    
+<header class="header">
+<nav class="navbar navbar-style">
+	<div class="container">
+		<div class="navbar-header">
+			<a href=""> <img class="img-fluid" src="Sportsman1.png" ></a>
+		</div>
+        
+       <style>
+         
+          .containere {
+            position: relative;
+            text-align: center;
+          
+            }
+
+
+            .top-right {
+            position: absolute;
+            top: -8px;
+            right: -4px;
+            font-weight: bold;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            background: yellow;
+            border: 3px solid blue;
+  
+            }
+            
+        </style>
+        
+        <ul class ="nav navbar-nav navbar-right containere">
+            <li> <a href=""><img class="img-fluid"src="cart.png" ></a></li>
+            <div class="top-right">5</div>
+        </ul>
+
+	</div>
+</nav>
+
+<style>
+
+
+.navbar2 {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar2 a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown2 {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown2 .dropbtn2 {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar2 a:hover, .dropdown2:hover .dropbtn2 {
+  background-color: red;
+}
+
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content2 a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content2 a:hover {
+  background-color: #ddd;
+}
+
+.dropdown2:hover .dropdown-content2 {
+  display: block;
+}
+
+
+</style>
 
 
 
+<form >
+<div class="navbar2" >
+  
+  <div class="dropdown2" >
+          <button class="dropbtn2" >Dropdown 
+                   <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content2"  style="margin-left: 500px;" >
+                   <a href="#">Link 1</a>
+                   <a href="#">Link 2</a>
+                   <a href="#">Link 3</a>
+          </div>
+  </div> 
+  <div class="dropdown2">
+          <button class="dropbtn2">Dropdown 
+                   <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content2">
+                   <a href="#">Link 1</a>
+                   <a href="#">Link 2</a>
+                   <a href="#">Link 3</a>
+          </div>
+  </div> 
+  <div class="dropdown2">
+          <button class="dropbtn2">Dropdown 
+                   <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content2">
+                   <a href="#">Link 1</a>
+                   <a href="#">Link 2</a>
+                   <a href="#">Link 3</a>
+          </div>
+  </div> 
+  <div class="dropdown2">
+          <button class="dropbtn2">Dropdown 
+                   <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content2">
+                   <a href="#">Link 1</a>
+                   <a href="#">Link 2</a>
+                   <a href="#">Link 3</a>
+          </div>
+  </div> 
+  <div class="dropdown2">
+          <button class="dropbtn2">Dropdown 
+                   <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content2">
+                   <a href="#">Link 1</a>
+                   <a href="#">Link 2</a>
+                   <a href="#">Link 3</a>
+          </div>
+  </div> 
+</div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</body>
-</html>
+</form>
+
+
+</header>
+

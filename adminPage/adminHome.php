@@ -3,12 +3,13 @@
 include '../include/Connection.php';
 
 //get showing images and details orderd by top sales 
-$GetItemsDetails = "SELECT * FROM items ORDER by solds DESC LIMIT 20";
+$GetItemsDetails = "SELECT items.id,items.productType,items.prize,items.brand, items.size,items.sportName,items.imagePath,SUM(sales.count) as no  FROM sales INNER JOIN items ON sales.id = items.id  group by items.id ORDER BY no DESC LIMIT 12";
 $ItemsDetais = $con->query($GetItemsDetails);
 
 
+
 //get showng images and details orderd by minimum sales
-$GetMinSale = "SELECT * FROM items ORDER by solds ASC LIMIT 20";
+$GetMinSale = "SELECT items.id,items.productType,items.prize,items.brand, items.size,items.sportName,items.imagePath,SUM(sales.count) as no  FROM sales INNER JOIN items ON sales.id = items.id  group by items.id ORDER BY no ASC LIMIT 12";
 $MinSale = $con->query($GetMinSale);
 
 
@@ -31,8 +32,8 @@ $MinSale = $con->query($GetMinSale);
 
 <body>
     <div class="d-flex" id="wrapper">
-        <!-- include sidebar codes-->
-        <?php include 'include/sideBar.php'?>
+            <!-- include sidebar codes-->
+            <?php include 'include/sideBar.php'?>
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
@@ -54,13 +55,14 @@ $MinSale = $con->query($GetMinSale);
 
 
  <!-- Top Sales Showing -->
- <div class="tab-pane fade show active" id="nav-TopSales" role="tabpanel" aria-labelledby="nav-TopSales-tab">
-        
- <!-- images load upper limit-->
-        <div class="row text-center" id="items">
-<?php 
+    <div class="tab-pane fade show active" id="nav-TopSales" role="tabpanel" aria-labelledby="nav-TopSales-tab">
+            
+    <!-- images load upper limit-->
+            <div class="row text-center" id="items">
+    <?php 
 if($ItemsDetais->num_rows >0){
   while($row = $ItemsDetais->fetch_array()){ 
+    
       //make correct image path
       $imagePath = "../".$row['imagePath'] ?>
 
@@ -68,9 +70,9 @@ if($ItemsDetais->num_rows >0){
                     <div class="card" id="border">
                         <img src="<?php echo $imagePath ;?>" alt="" class="img-fluid pb-1" id="itemImage">
                         <div class="figure-caption">
-                            <h6>product name : <?php echo $row['sportName']." ".$row['productType'] ;?></h6>
-                            <h6>Price Rs.<?php echo $row['prize'] ;?></h6>
-                            <h6><?php echo $row['solds'] ;?> items sold</h6>
+                            <h6 >product name : <?php echo $row['sportName']." ".$row['productType'] ;?></h6>
+                            <h6 style="font-weight: bold;">Price Rs.<?php echo $row['prize'] ;?></h6>
+                           
                             
                         </div>
                     </div>
@@ -79,7 +81,7 @@ if($ItemsDetais->num_rows >0){
 <?php }}?>    
            </div>
 <!-- images load down limit-->
-         </div>
+        </div>
 
 
 
@@ -104,7 +106,7 @@ if($MinSale->num_rows >0){
                         <div class="figure-caption">
                             <h6>product name : <?php echo $row['sportName']." ".$row['productType'] ;?></h6>
                             <h6>Price Rs.<?php echo $row['prize'] ;?></h6>
-                            <h6><?php echo $row['solds'] ;?> items sold</h6>
+                            <h6>s</h6>
                             
                         </div>
                     </div>

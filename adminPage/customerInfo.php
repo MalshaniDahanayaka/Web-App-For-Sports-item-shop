@@ -26,6 +26,12 @@ if(isset($_REQUEST['submitSortingMethod'])){
               $CustomerDetails = $con->query($GetCustomerDetails);
          }
 
+         if($_REQUEST['nameOfSortingMethod'] == "topCustomer"){
+                //sort customers oredered by top customers
+                $GetCustomerDetails = "SELECT users.email,users.username,users.password,users.verifiedEmail,users.registerDate,SUM(sales.price) as no  FROM sales INNER JOIN users ON sales.email = users.email  group by users.email ORDER BY no DESC";
+                $CustomerDetails = $con->query($GetCustomerDetails);
+         }
+
 
         if($_REQUEST['nameOfSortingMethod']=="lastShopingDate"){
         //sort by last bought items
@@ -99,7 +105,7 @@ if(isset($_REQUEST['DeleteUser'])){
         <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>" style="float: right;">
              <ul class="nav">
                  <li class="nav-item">
-                      <input type="text" name="searchName" id="searchName" for="search" placeholder="Enter Username">
+                      <input type="text" name="searchName" id="searchName" for="search" placeholder="Enter Username" onkeyup="myFunction()">
                       <input type="submit" name="findSearchedName" id="findSearchedName" value="Search" style="margin-right:20px;">
                  </li>
                  <li class="nav-item">
@@ -120,7 +126,7 @@ if(isset($_REQUEST['DeleteUser'])){
         </form>
     </nav>
 
-    <table class="table table-bordered table-dark" style="width: 100rem ; margin-right: auto;margin-left: auto;">
+    <table class="table table-bordered table-dark" style="width: 100rem ; margin-right: auto;margin-left: auto;" >
              <thead>
                       <tr>
                             <th scope="col">User Name</th>
