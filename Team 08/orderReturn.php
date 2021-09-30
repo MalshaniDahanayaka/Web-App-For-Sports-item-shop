@@ -23,7 +23,9 @@ while($detailsForsales = $resultSql->fetch_array()){
 $deleteFromCartSql = "DELETE FROM cart WHERE email= '".$userEmail."' ";
 $con->query($deleteFromCartSql);
 
-
+$unsetsql = "SELECT * FROM cart WHERE email= '".$_SESSION['usermail']."'";
+$resToUnset  = $con->query($unsetsql);
+if($resToUnset->num_rows == 0){unset($_SESSION['cart']);} 
 
 
 
