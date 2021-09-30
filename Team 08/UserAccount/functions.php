@@ -188,7 +188,7 @@ function register_user($first_name, $last_name, $username, $email, $password)
 
       $subject = "Activate Your User Account";
       $msg = "Please click the below link to activate your sportsman.lk user account,
-        http://localhost/sports/UserAccount/activate.php?email=$email&code=$validation_code";
+        http://localhost/Team%2008/UserAccount/activate.php?email=$email&code=$validation_code";
 
       $headers = "From: slspotsman.lk@gmail.com";
 

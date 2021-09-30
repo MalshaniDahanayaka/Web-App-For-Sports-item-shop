@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 30, 2021 at 02:36 PM
+-- Generation Time: Sep 30, 2021 at 06:57 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `team 08`
 --
+CREATE DATABASE IF NOT EXISTS `team 08` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `team 08`;
 
 -- --------------------------------------------------------
 
@@ -111,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `items` (
 INSERT INTO `items` (`id`, `sportName`, `productType`, `brand`, `size`, `prize`, `countOfItems`, `category`, `imagePath`, `description`) VALUES
 ('FooBalMol-', 'FootBall', 'Ball', 'Molten', '-', 5200, 6, 'Team Sports', 'img/FooBalMol-.jpg', 'Entry Level Training Footballs made with Imported PVC, Machine Stitched, Soft Touch and available in Vibrant Colors and Designs.'),
 ('FooBalkap-', 'FootBall', 'Ball', 'kappa', '-', 4800, 7, 'Team Sports', 'img/FooBalkap-.jpg', 'Entry-Level Training Footballs made with Imported PVC, Machine Stitched, Soft Touch and available in Vibrant Colors and Designs.'),
-('FooShoPum6', 'FootBall', 'Shoes', 'Puma', '6', 12900, 9, 'Team Sports', 'img/FooShoPum6.jpg', 'Buy high quality football shoes online for best prices. Visit our online store and check the prices of high quality Cosco football shoes for affordable prices. We deliver items to your doorstep'),
+('FooShoPum6', 'FootBall', 'Shoes', 'Puma', '6', 12900, 8, 'Team Sports', 'img/FooShoPum6.jpg', 'Buy high quality football shoes online for best prices. Visit our online store and check the prices of high quality Cosco football shoes for affordable prices. We deliver items to your doorstep'),
 ('FooShoadi8', 'FootBall', 'Shoes', 'adidas', '8', 14700, 4, 'Team Sports', 'img/FooShoadi8.jpg', 'Buy high quality football shoes online for best prices. Visit our online store and check the prices of high quality Cosco football shoes for affordable prices. We deliver items to your doorstep'),
 ('FooShoPum5', 'FootBall', 'Shoes', 'Puma', '5', 12500, 3, 'Team Sports', 'img/FooShoPum5.jpg', 'Buy high quality football shoes online for best prices. Visit our online store and check the prices of high quality Cosco football shoes for affordable prices. We deliver items to your doorstep'),
 ('FooShoadi10', 'FootBall', 'Shoes', 'adidas', '10', 15000, 0, 'Team Sports', 'img/FooShoadi10.jpg', 'Buy high quality football shoes online for best prices. Visit our online store and check the prices of high quality Cosco football shoes for affordable prices. We deliver items to your doorstep'),
@@ -128,7 +130,7 @@ INSERT INTO `items` (`id`, `sportName`, `productType`, `brand`, `size`, `prize`,
 ('CriBatvillar', 'Cricket', 'Batting Gloves', 'vilson', 'large', 4600, 6, 'Team Sports', 'img/CriBatvillar.jpg', 'Gima Batting Inner Cotton Plain is Highest Quality Fingerless Gloves'),
 ('CriBatvilsma', 'Cricket', 'Batting Gloves', 'vilson', 'small', 4200, 21, 'Team Sports', 'img/CriBatvilsma.jpg', 'Gima Batting Inner Cotton Plain is Highest Quality Fingerless Gloves'),
 ('CriBatOthmed', 'Cricket', 'Batting Gloves', 'Other', 'medium', 3600, 11, 'Team Sports', 'img/CriBatOthmed.jpg', 'Gima Batting Inner Cotton Plain is Highest Quality Fingerless Gloves'),
-('CriThiadilar', 'Cricket', 'Thigh Pads', 'adidas', 'large', 1600, 2, 'Team Sports', 'img/CriThiadilar.jpg', 'Gima Molded Thigh pad Both Side Highest Quality Cricket Thigh Pads'),
+('CriThiadilar', 'Cricket', 'Thigh Pads', 'adidas', 'large', 1600, 1, 'Team Sports', 'img/CriThiadilar.jpg', 'Gima Molded Thigh pad Both Side Highest Quality Cricket Thigh Pads'),
 ('CriThiPumlar', 'Cricket', 'Thigh Pads', 'Puma', 'large', 1800, 5, 'Team Sports', 'img/CriThiPumlar.jpg', 'Gima Molded Thigh pad Both Side Highest Quality Cricket Thigh Pads'),
 ('CriGriMik-', 'Cricket', 'Grips', 'Mikasa', '-', 550, 44, 'Team Sports', 'img/CriGriMik-.jpg', 'Best Cricket Bat Grips\r\n\r\n– Gripper Design\r\n– Chevron Design\r\n– Scale Design\r\n– Octopus Design with Plain Mix Colors.'),
 ('CriGrinik-', 'Cricket', 'Grips', 'nike', '-', 600, 75, 'Team Sports', 'img/CriGrinik-.jpg', 'Best Cricket Bat Grips\r\n\r\n– Gripper Design\r\n– Chevron Design\r\n– Scale Design\r\n– Octopus Design with Plain Mix Colors.'),
@@ -143,14 +145,14 @@ INSERT INTO `items` (`id`, `sportName`, `productType`, `brand`, `size`, `prize`,
 ('BasShonik8', 'Basket Ball', 'Shoes', 'nike', '8', 15000, 3, 'Team Sports', 'img/BasShonik8.jpg', 'Winmark Basketball Shoes – Highest Quality Lightweight Professional Shoes.'),
 ('BasJerPumlar', 'Basket Ball', 'Jersey', 'Puma', 'large', 780, 3, 'Team Sports', 'img/BasJerPumlar.jpg', 'Buy high quality Basketball jersey online for best prices. Visit our online store and check the prices of high quality Cosco Basketball jersey for affordable prices. We deliver items to your doorstep.'),
 ('BasJerMikmed', 'Basket Ball', 'Jersey', 'Mikasa', 'medium', 670, 2, 'Team Sports', 'img/BasJerMikmed.jpg', 'Buy high quality Basketball jersey online for best prices. Visit our online store and check the prices of high quality Cosco Basketball jersey for affordable prices. We deliver items to your doorstep.'),
-('BatRacadi-', 'Batminton', 'Racket', 'adidas', '-', 6000, 1, 'Team Sports', 'img/BatRacadi-.jpg', 'Included: Turbo – 2 rackets, 6 Shuttles, and badminton net. Home Use Only, Not Branded'),
+('BatRacadi-', 'Batminton', 'Racket', 'adidas', '-', 6000, 0, 'Team Sports', 'img/BatRacadi-.jpg', 'Included: Turbo – 2 rackets, 6 Shuttles, and badminton net. Home Use Only, Not Branded'),
 ('BatRacnik-', 'Batminton', 'Racket', 'nike', '-', 3500, 4, 'Team Sports', 'img/BatRacnik-.jpg', 'Included: Turbo – 2 rackets, 6 Shuttles, and badminton net. Home Use Only, Not Branded'),
 ('BatShuMik-', 'Batminton', 'Shuttlecock', 'Mikasa', '-', 400, 3, 'Team Sports', 'img/BatShuMik-.jpg', 'Buy High Quality Badminton Shuttlecock and Badminton Accessories Online. Visit our online store and order high quality badminton shuttlecock and other Badminton Accessories online. We deliver items to your doorstep.'),
 ('NetBaladi-', 'NetBall', 'Ball', 'adidas', '-', 5700, 4, 'Team Sports', 'img/NetBaladi-.jpg', 'Entry Level Training Netballs made with Imported PVC, Machine Stitched, Soft Touch and available in Vibrant Colors and Designs.'),
 ('RugBalMik-', 'Rugby', 'Ball', 'Mikasa', '-', 5800, 4, 'Team Sports', 'img/RugBalMik-.jpg', 'Entry Level Training Rugby made with Imported PVC, Machine Stitched, Soft Touch and available in Vibrant Colors and Designs.'),
 ('RugJerkapmed', 'Rugby', 'Jersey', 'kappa', 'medium', 2300, 3, 'Team Sports', 'img/RugJerkapmed.jpg', 'Buy high quality Rugby jersey online for best prices. Visit our online store and check the prices of high quality Cosco Rugby jersey for affordable prices. We deliver items to your doorstep.'),
 ('WatBalMik-', 'Water Polo', 'Ball', 'Mikasa', '-', 3400, 2, 'Team Sports', 'img/WatBalMik-.jpg', 'Entry Level Training waterpolo made with Imported PVC, Machine Stitched, Soft Touch and available in Vibrant Colors and Designs.'),
-('HanBalPum-', 'HandBall', 'Ball', 'Puma', '-', 3400, 2, 'Team Sports', 'img/HanBalPum-.jpg', 'Entry Level Training handballball made with Imported PVC, Machine Stitched, Soft Touch and available in Vibrant Colors and Designs.'),
+('HanBalPum-', 'HandBall', 'Ball', 'Puma', '-', 3400, 1, 'Team Sports', 'img/HanBalPum-.jpg', 'Entry Level Training handballball made with Imported PVC, Machine Stitched, Soft Touch and available in Vibrant Colors and Designs.'),
 ('VbaBalMik-', 'Vball', 'Ball', 'Mikasa', '-', 4500, 4, 'Team Sports', 'img/VbaBalMik-.jpg', 'The eight panel design allows the fingers more surface contact for better sets and passing. Official size and weight.'),
 ('VbaNetPum-', 'Vball', 'Net', 'Puma', '-', 2300, 4, 'Team Sports', 'img/VbaNetPum-.jpg', '– Simple and portable\r\n– Standard sports volleyball net, size 9.5 m x 1 m.\r\n– Color: White\r\n– Material: PE, four-sided thickened canvas, beautiful and durable.\r\n– The wire rope runs directly through the net and can be used directly on the grid.\r\n– It is resistant to weathering and is sun proof and rainproof for competition and training.\r\n– Suitable for outdoor games with family or friends anytime, anywhere.'),
 ('VbaKnenik-', 'Vball', 'Knee Gaurd', 'nike', '-', 1600, 4, 'Team Sports', 'img/VbaKnenik-.jpg', 'To therapy and velication you knee. Provide under prop and protect your muscle. Easy to wear, suitable for any sports.'),
@@ -159,7 +161,7 @@ INSERT INTO `items` (`id`, `sportName`, `productType`, `brand`, `size`, `prize`,
 ('AthShonikext', 'Athlatic', 'Shorts', 'nike', 'extra large', 560, 5, 'Running and Fitness', 'img/AthShonikext.jpg', 'Buy high quality Athlatic shorts online for best prices. Visit our online store and check the prices of high quality Cosco Athlatic shorts for affordable prices. We deliver items to your doorstep.'),
 ('AthJerFrasma', 'Athlatic', 'Jersey', 'Franklin', 'small', 950, 4, 'Running and Fitness', 'img/AthJerFrasma.jpg', 'Buy high quality Athlatic jersey online for best prices. Visit our online store and check the prices of high quality Cosco Athlatic jersey shorts for affordable prices. We deliver items to your doorstep.'),
 ('GymWeikap5kg', 'Gym items', 'Weight Plate', 'kappa', '5kg', 1500, 9, 'Running and Fitness', 'img/GymWeikap5kg.jpg', 'weight platter target specific muscle group exercises or a full body workout'),
-('BoxGloPumlar', 'Boxing', 'Gloves', 'Puma', 'large', 4000, 6, 'Running and Fitness', 'img/BoxGloPumlar.jpg', 'Dipak Supremo Boxing Gloves is Highest Quality Gloves'),
+('BoxGloPumlar', 'Boxing', 'Gloves', 'Puma', 'large', 4000, 4, 'Running and Fitness', 'img/BoxGloPumlar.jpg', 'Dipak Supremo Boxing Gloves is Highest Quality Gloves'),
 ('KarJerFralar', 'Karate', 'Jersey', 'Franklin', 'large', 4800, 3, 'Running and Fitness', 'img/KarJerFralar.jpg', 'Buy high-quality karate jerseys online for the best prices. Visit our online store and check the prices of high-quality Cosco karate jerseys for affordable prices. We deliver items to your doorstep.'),
 ('CheChevil-', 'Chess', 'Chess Board', 'vilson', '-', 800, 6, 'Home Play', 'img/CheChevil-.jpg', 'Child’s Intelligence High Class Chess Set.\r\nisland wide delivery.'),
 ('CheCheOth-', 'Chess', 'Chess Board', 'Other', '-', 3200, 6, 'Home Play', 'img/CheCheOth-.jpg', 'Child’s Intelligence High Class Chess Set.\r\nisland wide delivery.'),
@@ -239,7 +241,12 @@ INSERT INTO `sales` (`id`, `count`, `price`, `email`, `soldDate`) VALUES
 ('FooShoadi10', 1, 15000, 'skasunmk982@gmail.com', '2021-09-30 10:20:25'),
 ('CriThiadilar', 2, 3200, 'mekaladahanayaka80@gmail.com', '2021-09-30 11:50:41'),
 ('BatRacadi-', 2, 12000, 'codeforce186@gmail.com', '2021-09-30 12:30:27'),
-('CriThiadilar', 1, 1600, 'codeforce186@gmail.com', '2021-09-30 12:30:27');
+('CriThiadilar', 1, 1600, 'codeforce186@gmail.com', '2021-09-30 12:30:27'),
+('BoxGloPumlar', 2, 8000, 'skasunmk982@gmail.com', '2021-09-30 18:37:14'),
+('FooShoPum6', 1, 12900, 'skasunmk982@gmail.com', '2021-09-30 18:37:14'),
+('HanBalPum-', 1, 3400, 'skasunmk982@gmail.com', '2021-09-30 18:37:14'),
+('BatRacadi-', 1, 6000, 'skasunmk982@gmail.com', '2021-09-30 18:50:51'),
+('CriThiadilar', 1, 1600, 'skasunmk982@gmail.com', '2021-09-30 18:50:51');
 
 -- --------------------------------------------------------
 
@@ -259,7 +266,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `active` int(2) NOT NULL,
   `registerDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
@@ -289,9 +296,9 @@ INSERT INTO `users` (`id`, `email`, `first_name`, `last_name`, `username`, `pass
 (22, 'nimantha@gmail.com', 'nimantha', 'gayana', 'nimantha gayan', 'cefc10f1447898c039b1f8e00f41c61c', '', 1, '2021-09-23 10:58:46'),
 (23, 'yasiru@gmail.com', 'yasiru', 'perera', 'yasiru', '4186c0b10cbc245a22949e121e0bb601', '', 1, '2021-09-23 13:02:16'),
 (24, 'sisitha@gmail.com', 'sisitha', 'jayawardana', 'sisitha', '593c3139f02fda6de18732c76d5041a4', '', 1, '2021-09-23 13:05:56'),
-(25, 'skasunmk982@gmail.com', 'kasun', 'madhumal', 'kasun madhumal', '81dc9bdb52d04dc20036dbd8313ed055', '0', 1, '2021-09-29 17:29:56'),
 (27, 'codeforce186@gmail.com', 'dilka', 'dushmantha', 'dilkass', '81dc9bdb52d04dc20036dbd8313ed055', '0', 1, '2021-09-30 12:28:36'),
-(26, 'mekaladahanayaka80@gmail.com', 'malshani', 'dahanayaka', 'mekala', '81dc9bdb52d04dc20036dbd8313ed055', '0', 1, '2021-09-30 11:46:20');
+(26, 'mekaladahanayaka80@gmail.com', 'malshani', 'dahanayaka', 'mekala', '81dc9bdb52d04dc20036dbd8313ed055', '0', 1, '2021-09-30 11:46:20'),
+(29, 'skasunmk982@gmail.com', 'kasun', 'madhumal', 'kasun madhumal', '81dc9bdb52d04dc20036dbd8313ed055', '0', 1, '2021-09-30 18:49:20');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -14,9 +14,9 @@ session_start();
           <div class="container" >
               <form method="post" action="https://sandbox.payhere.lk/pay/checkout">   
     			<input type="hidden" name="merchant_id" value="1218751">    <!-- Replace your Merchant ID -->
-    			<input type="hidden" name="return_url" value="http://localhost/sports/orderReturn.php">
-    			<input type="hidden" name="cancel_url" value="http://localhost/sports/orderCancel.php">
-    			<input type="hidden" name="notify_url" value="http://localhost/sports/orderNotify.php">  
+    			<input type="hidden" name="return_url" value="http://localhost/Team%2008/orderReturn.php">
+    			<input type="hidden" name="cancel_url" value="http://localhost/Team%2008/orderCancel.php">
+    			<input type="hidden" name="notify_url" value="http://localhost/Team%2008/orderNotify.php">  
     			
                 <input type="hidden" name="order_id" value="<?php echo $_SESSION['order_id']; ?>">
     			<input type="hidden" name="items" value="<?php echo $_SESSION['itemsList']; ?>"><br>
